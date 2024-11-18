@@ -1,0 +1,17 @@
+import random
+import string
+
+number_of_instances = int(input('Enter number of instances: '))
+
+department = input('Which department: ')
+
+def generate_unique_name(department):
+    # Generate a random string of 6 alphanumeric characters
+    random_str = ''.join(random.choices(string.ascii_uppercase + string.digits, k=6))
+    # Combine department and random string
+    return f"{department}-{random_str}"
+
+# Generate and display the unique names
+for i in range(num_instances):
+    print(generate_unique_name(department))
+
